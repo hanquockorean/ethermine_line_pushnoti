@@ -17,6 +17,7 @@ if __name__ == "__main__":
         try:
             pay = etherm.miner_payouts(add)
             dash = etherm.miner_dashboard(add)
+            print('%.1f: %s' %(time.time(), str(pay[0])))
             
             if (dash['statistics'][-1]['activeWorkers'] == 1):
                 re_aleart = 0
